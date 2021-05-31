@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import {RouterModule} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
+import {MaterialModule} from "../material/material.module";
 
 
 
@@ -17,7 +18,8 @@ import {MatIconModule} from "@angular/material/icon";
     CommonModule,
     RouterModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MaterialModule
   ]
 })
 export class CoreModule { }
