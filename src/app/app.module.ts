@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import {MaterialModule} from "./material/material.module";
 import {CoreModule} from "./core/core.module";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
+import {FlightsModule} from "./flights/flights.module";
 
 
 
@@ -20,7 +21,8 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
     AngularFireModule.initializeApp(environment.firebase),
     MaterialModule,
     CoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FlightsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
