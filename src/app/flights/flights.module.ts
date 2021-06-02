@@ -5,11 +5,8 @@ import { FlightsComponent } from './flights.component';
 
 
 @NgModule({
-  declarations: [
-    FlightsComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [FlightsComponent],
+  imports: [CommonModule],
+  exports: [FlightsComponent]
 })
 export class FlightsModule { }

@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {AngularFireModule} from '@angular/fire'
 import { environment } from 'src/environments/environment';
 import {MaterialModule} from "./material/material.module";
+import {CoreModule} from "./core/core.module";
+import {AngularFireDatabaseModule} from "@angular/fire/database";
 
 
 
@@ -16,7 +18,9 @@ import {MaterialModule} from "./material/material.module";
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    MaterialModule
+    MaterialModule,
+    CoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

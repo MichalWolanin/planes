@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./core/login/login.component";
 import {DashboardComponent} from "./core/dashboard/dashboard.component";
+import {FlightsComponent} from "./flights/flights.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: '', redirectTo: 'flights', pathMatch: 'full' },
-      { path: 'flights', component: LoginComponent },
+      { path: 'flights', component: FlightsComponent },
     ]
   },
 ];
