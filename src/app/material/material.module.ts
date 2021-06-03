@@ -7,8 +7,13 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatSelectModule} from "@angular/material/select";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
-import {MatDialogModule} from "@angular/material/dialog";
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
 import {MatCardModule} from "@angular/material/card";
+const MAT_DIALOG_GLOBAL_CONFIG: MatDialogConfig = {
+  width: '700px',
+  disableClose: true,
+  hasBackdrop: true
+};
 
 const MATERIAL_MODULES = [
   MatIconModule,
@@ -25,6 +30,10 @@ const MATERIAL_MODULES = [
 @NgModule({
   declarations: [],
   imports: [],
-  exports: [...MATERIAL_MODULES]
+  exports: [...MATERIAL_MODULES],
+  providers: [
+    {provide:MAT_DIALOG_DEFAULT_OPTIONS, useValue: MAT_DIALOG_GLOBAL_CONFIG}
+  ]
+
 })
 export class MaterialModule { }

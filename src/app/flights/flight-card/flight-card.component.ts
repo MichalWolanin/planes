@@ -4,9 +4,9 @@ import {Flight} from "../../models/flight.model";
 @Component({
   selector: 'app-flight-card',
   templateUrl: './flight-card.component.html',
-  styleUrls: ['./flight-card.component.css']
+  styleUrls: ['./flight-card.component.scss']
 })
 export class FlightCardComponent {
-  @Input() flight: Flight | undefined;
+  @Input() flight!: Flight;
 
 }

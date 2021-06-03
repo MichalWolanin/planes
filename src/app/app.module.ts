@@ -8,6 +8,7 @@ import {MaterialModule} from "./material/material.module";
 import {CoreModule} from "./core/core.module";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
 import {FlightsModule} from "./flights/flights.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -17,6 +18,7 @@ import {FlightsModule} from "./flights/flights.module";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     MaterialModule,
