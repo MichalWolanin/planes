@@ -44,5 +44,32 @@
       <mat-checkbox formControlName="withSKPlanesDiscount">With WP Discount</mat-checkbox>
     </div>
   </div>
+  <div class="crew-container shadow" *ngFor="let crewMember of [1, 2, 3];index as index">
+    <div class="row crew-header">
+      <div class="col">
+        <span>Crew Member - {{ index + 1}} </span>
+        <mat-icon class="float-right">delete_forever</mat-icon>
+      </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <mat-form-field>
+            <input matInput placeholder="Name">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field>
+            <mat-select placeholder="Job">
+              <mat-option *ngFor="let x of ['stewardess', 'pilot', 'mechanic']"> {{ x }} </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button color="primary">Add crew member</button>
+    </div>
+  </div>
 </form>
 <pre>{{ form.value | json }}</pre>
