@@ -3,9 +3,9 @@
     <div class="col-sm-8">
       <mat-form-field>
         <input matInput formControlName="code" placeholder="Code">
-        <mat-error *ngIf="form.get('code').hasError('required')">Code is required</mat-error>
-        <mat-error *ngIf="form.get('code').hasError('minlength')">Minimum length is 4 chars</mat-error>
-        <mat-error *ngIf="form.get('code').hasError('maxlength')">Maximum length is 7 chars</mat-error>
+        <mat-error *ngIf="form.get('code')?.errors?.required">Code is required</mat-error>
+        <mat-error *ngIf="form.get('code')?.errors?.minlength">Minimum length is 4 chars</mat-error>
+        <mat-error *ngIf="form.get('code')?.errors?.maxlength">Maximum length is 7 chars</mat-error>
       </mat-form-field>
     </div>
   </div>
