@@ -19,6 +19,10 @@ export class FlightsService {
       .pipe(map(response => response.map(flight => this.assignKey(flight))));
   }
 
+  addFlight (flight: Flight) {
+    return this.db.list<Flight>(this.API_URL).push(flight);
+  }
+
   private assignKey(flight: SnapshotAction<any>) {
     return {...flight.payload.val(), key: flight.key}
   }
