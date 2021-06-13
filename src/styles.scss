@@ -1,1 +1,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.toast-success {
+  background: forestgreen;
+}
+
+.toast-error {
+  background: orangered;
+}
