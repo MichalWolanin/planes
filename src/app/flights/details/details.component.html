@@ -1,1 +1,18 @@
-<p>details works!</p>
+<div class="row">
+  <div class="col">
+    <h3>
+      FLIGHT DETAILS
+      <mat-icon class="float-right" (click)="close()"> close </mat-icon>
+    </h3>
+    <span class="label">Code: {{ flight.code }}</span>
+    <p class="label">Crew:</p>
+    <ul>
+      <li *ngFor="let member of flight.crew">
+        {{ member.name }}
+      </li>
+    </ul>
+    <button mat-raised-button color="primary" class="float-right" (click)="goToEditFlight()">
+      EDIT FLIGHT
+    </button>
+  </div>
+</div>
