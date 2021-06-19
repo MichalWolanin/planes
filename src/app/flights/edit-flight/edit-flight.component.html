@@ -1,1 +1,12 @@
-<p>edit-flight works!</p>
+<div class="row">
+  <div class="col-9">
+    <h3>Edit Flight <strong>{{ flight.code }}</strong> details </h3>
+  </div>
+</div>
+<app-flight-form #flightForm></app-flight-form>
+  <div class="row">
+    <div class="col-text-right">
+      <button mat-raised-button>RESET</button>
+      <button mat-raised-button color="primary">SAVE</button>
+    </div>
+  </div>

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FlightsService} from "../../core/services/flights.service";
+import {ActivatedRoute} from "@angular/router";
+import {FlightFormComponent} from "../flight-form/flight-form.component";
 
 @Component({
   selector: 'app-edit-flight',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-flight.component.css']
 })
 export class EditFlightComponent implements OnInit {
+  @ViewChild('flightForm') flighForm: FlightFormComponent;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private flightsService: FlightsService
+  ) { }
 
   ngOnInit(): void {
+
   }
+
+    private loadFlight() {
+      const key = this.route.snapshot.params['key'];
+      this.flightsService.getFlight(key);
+    }
+
 
 }
