@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import {RouterModule} from "@angular/router";
 import {MaterialModule} from "../material/material.module";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -14,6 +15,7 @@ import {MaterialModule} from "../material/material.module";
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule,
     MaterialModule
   ]

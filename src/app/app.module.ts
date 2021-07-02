@@ -9,6 +9,7 @@ import {CoreModule} from "./core/core.module";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
 import {FlightsModule} from "./flights/flights.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AngularFireAuthModule} from "@angular/fire/auth";
 
 
 
@@ -22,6 +23,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     MaterialModule,
+    AngularFireAuthModule,
     CoreModule,
     AngularFireDatabaseModule,
     FlightsModule
