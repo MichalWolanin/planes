@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .logout-icon {
   font-size: 35px;
   cursor: pointer;
@@ -12,5 +17,15 @@
   cursor: pointer;
   padding: 4px;
   border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.logout-container {
+  display: flex;
+  align-items: center;
+ }
+.mat-icon {
+  height: 35px;
+  width: 35px;
 }
 
