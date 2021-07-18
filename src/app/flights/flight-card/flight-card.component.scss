@@ -28,7 +28,7 @@
   transform: translateX(-50%);
 
   mat-icon {
-    color: darkblue;
+    color: #71cdde;
   }
 }
 
@@ -39,15 +39,19 @@
 }
 
 .destination, .origin {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: bold;
-  color: deeppink;
+  color: #f16268;
 }
 
 .icon-container.shadow {
   display: flex;
   align-items: center;
 }
-.col-ori-destination {
-  display: flex;
+.col-ori-desti {
+  display: contents;
+}
+
+.row {
+  justify-content: center;
 }

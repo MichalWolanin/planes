@@ -31,7 +31,7 @@ const MATERIAL_MODULES = [
   MatSnackBarModule,
   MatCheckboxModule,
   MatSelectModule,
-  MatToolbarModule
+  MatToolbarModule,
 ]
 @NgModule({
   declarations: [],
