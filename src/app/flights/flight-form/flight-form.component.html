@@ -1,6 +1,7 @@
+
 <form [formGroup]="form">
   <div class="row">
-    <div class="col-sm-8">
+    <div>
       <mat-form-field>
         <input matInput formControlName="code" placeholder="Code" #codeInput>
         <mat-error *ngIf="form.get('code')?.errors?.required">Code is required</mat-error>
@@ -11,40 +12,40 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div >
       <mat-form-field>
         <input matInput formControlName="origin" placeholder="Origin">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div>
       <mat-form-field>
         <input matInput formControlName="destination" placeholder="Destination">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div>
       <mat-form-field>
         <input matInput formControlName="departureTime" placeholder="Departure time">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div>
       <mat-form-field>
         <input matInput formControlName="returnTime" placeholder="Return time">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-8">
+    <div>
       <textarea matInput formControlName="additionalInformation" placeholder="Additional Information"></textarea>
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div>
       <mat-checkbox formControlName="withSKPlanesDiscount">With WP Discount</mat-checkbox>
     </div>
   </div>
@@ -56,12 +57,12 @@
       </div>
 
       <div class="row" [formGroupName]="index">
-        <div class="col-sm-5">
+        <div>
           <mat-form-field>
             <input matInput formControlName="name" placeholder="Name">
           </mat-form-field>
         </div>
-        <div class="col-sm-4">
+        <div>
           <mat-form-field>
             <mat-select formControlName="job" placeholder="Job">
               <mat-option *ngFor="let job of jobs" [value] = "job.value">{{ job.label }} </mat-option>
@@ -72,7 +73,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div>
       <button mat-raised-button color="primary" (click)="addCrewMember()">Add crew member</button>
     </div>
   </div>
