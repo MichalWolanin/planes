@@ -1,0 +1,17 @@
+@use 'src/assets/variables/colors';
+
+.app-edit-flight {
+  display: flex;
+
+  .remove-btn {
+    color: colors.$warn;
+    cursor: pointer;
+    font-size: 42px;
+    padding-top: 15px;
+  }
+
+  .app-edit-flight__title {
+    display: flex;
+    justify-content: center;
+  }
+}

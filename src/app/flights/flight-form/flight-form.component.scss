@@ -1,10 +1,28 @@
-.crew-container {
-  margin-top: 15px;
-  padding: 15px;
-  background: white;
-}
+@use 'src/assets/variables/colors';
 
-.crew-header {
-  margin-bottom: 20px;
-  font-weight: bold;
+.app-flight-form {
+
+  .app-flight-form__crew-container {
+    margin-top: 15px;
+    padding: 15px;
+    background: white;
+  }
+
+  .app-flight-form__crew-header {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .app-flight-form__form-field {
+  }
+
+  .app-flight-form__button {
+    background: colors.$primary;
+    margin-top: 3%;
+  }
+  .app-flight-form__crew {
+    width: 33.3%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
