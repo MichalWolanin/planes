@@ -2,9 +2,11 @@
 
 .app-edit-flight {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   .remove-btn {
-    color: colors.$warn;
+    color: colors.$primary;
     cursor: pointer;
     font-size: 42px;
     padding-top: 15px;
@@ -13,5 +15,9 @@
   .app-edit-flight__title {
     display: flex;
     justify-content: center;
+  }
+
+  .app-edit-flight__save-btn {
+    padding: 4%;
   }
 }

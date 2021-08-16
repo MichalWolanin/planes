@@ -13,16 +13,23 @@
     font-weight: bold;
   }
 
+  .app-flight-form__float-right {
+    cursor: pointer;
+  }
+
   .app-flight-form__form-field {
+    display: flex;
+    flex-direction: column;
   }
 
   .app-flight-form__button {
     background: colors.$primary;
     margin-top: 3%;
   }
+
   .app-flight-form__crew {
-    width: 33.3%;
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }

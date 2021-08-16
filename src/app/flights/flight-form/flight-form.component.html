@@ -55,7 +55,7 @@
       <div class="app-flight-form__crew-header">
         <div>
           <span>Crew Member - {{ index + 1}} </span>
-          <mat-icon class="float-right" (click)="removeCrewMember(index)">delete_forever</mat-icon>
+          <mat-icon class="app-flight-form__float-right" (click)="removeCrewMember(index)">close</mat-icon>
         </div>
 
         <div [formGroupName]="index">
