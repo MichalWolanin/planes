@@ -5,11 +5,16 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  .app-edit-flight__main {
+    display: flex;
+    align-items: center;
+  }
+
   .remove-btn {
     color: colors.$primary;
     cursor: pointer;
     font-size: 42px;
-    padding-top: 15px;
+    padding-left: 4%;
   }
 
   .app-edit-flight__title {
@@ -17,7 +22,13 @@
     justify-content: center;
   }
 
-  .app-edit-flight__save-btn {
+  .app-edit-flight__buttons {
     padding: 4%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-edit-flight__save-btn {
+    background: colors.$primary;
   }
 }

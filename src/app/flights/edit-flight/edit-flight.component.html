@@ -13,9 +13,9 @@
     <div class="app-edit-flight__form">
       <app-flight-form #flightForm [editMode]="true"></app-flight-form>
     </div>
-    <div class="app-edit-flight__save-btn">
+    <div class="app-edit-flight__buttons">
       <button mat-raised-button>RESET</button>
-      <button mat-raised-button color="primary"(click)="editFlight()">SAVE</button>
+      <button mat-raised-button class="app-edit-flight__save-btn" (click)="editFlight()">SAVE</button>
     </div>
   </div>
 </div>

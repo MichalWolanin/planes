@@ -1,8 +1,8 @@
-<div class="row">
+<div class="app-details">
   <div>
-    <h3 class="header">
+    <h3 class="app-details__header">
       FLIGHT DETAILS
-      <mat-icon class="float-right" (click)="close()"> close </mat-icon>
+      <mat-icon class="app-details__float-right" (click)="close()"> close </mat-icon>
     </h3>
     <span class="label">Code: {{ flight.code }}</span>
     <p class="label">Crew:</p>
@@ -11,8 +11,8 @@
         {{ member.name }}
       </li>
     </ul>
-    <div class="edit-button-container">
-      <button mat-raised-button class="edit-button" (click)="goToEditFlight()">
+    <div class="app-details__edit-button-container">
+      <button mat-raised-button class="app-details__edit-button" (click)="goToEditFlight()">
          EDIT FLIGHT
       </button>
     </div>

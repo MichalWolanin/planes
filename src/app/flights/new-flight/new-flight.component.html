@@ -1,13 +1,15 @@
-<h2 mat-dialog-title>New Flight Creator</h2>
-<mat-dialog-content>
-  <app-flight-form #flightForm></app-flight-form>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <div class="row">
-    <div class="col">
-      <button mat-raised-button mat-dialog-close>Cancel</button>
-      <button mat-raised-button color="primary" [disabled]="flightForm.form.invalid" (click)="createFlight()">Create</button>
+<div class="app-new-flight">
+  <h2 mat-dialog-title class="app-new-flight__title">New Flight Creator</h2>
+  <mat-dialog-content>
+    <app-flight-form #flightForm></app-flight-form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="app-new-flight__buttons">
+    <div>
+      <div>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+        <button mat-raised-button class="app-new-flight__create-button" [disabled]="flightForm.form.invalid" (click)="createFlight()">Create</button>
 
+      </div>
     </div>
-  </div>
-</mat-dialog-actions>
+  </mat-dialog-actions>
+</div>

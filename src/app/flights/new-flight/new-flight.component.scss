@@ -1,0 +1,17 @@
+@use 'src/assets/variables/colors';
+
+.app-new-flight {
+
+  .app-new-flight__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-new-flight__buttons {
+    justify-content: center;
+  }
+
+  .app-new-flight__create-button {
+    background: colors.$primary
+  }
+}

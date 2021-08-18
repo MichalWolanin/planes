@@ -1,13 +1,19 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-}
+.app-details {
+  .app-details__header {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.edit-button-container {
-  display: flex;
-  justify-content: center;
-}
+  .app-details__edit-button-container {
+    display: flex;
+    justify-content: center;
+  }
 
-.edit-button {
-  background: #f16268;
+  .app-details__edit-button {
+    background: #f16268;
+  }
+
+  .app-details__float-right {
+    cursor: pointer;
+  }
 }

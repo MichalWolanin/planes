@@ -1,6 +1,7 @@
 @use 'src/assets/variables/colors';
 
 .app-flight-form {
+  display: flex;
 
   .app-flight-form__crew-container {
     margin-top: 15px;
