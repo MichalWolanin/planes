@@ -1,61 +1,69 @@
-:host {
-  cursor: pointer;
-}
+@use 'src/assets/variables/colors';
 
-.card-container {
-  padding: 10px;
-  position: relative;
-}
+.app-flight-card {
 
-.card-content {
-  padding: 30px 20px;
-  background: white;
-}
 
-.icon-container {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: -10px;
-  height: 50px;
-  width: 50px;
-  background: white;
-  border-radius: 50%;
-  z-index: 10;
-  border: 1px solid grey;
-  transform: translateX(-50%);
-
-  mat-icon {
-    color: black;
+  :host {
+    cursor: pointer;
   }
-}
 
-.time {
-  text-align: center;
-  font-size: 13px;
-  color: grey;
-}
+  .app-flight-card__card-container {
+    padding: 10px;
+    position: relative;
+  }
 
-.destination, .origin {
-  font-size: 18px;
-  font-weight: bold;
-  color: #f16268;
-}
+  .app-flight-card__card-content.shadow {
+    padding: 30px 20px;
+    background: white;
+    cursor: pointer;
+  }
 
-.icon-container.shadow {
-  display: flex;
-  align-items: center;
-}
-.col-ori-desti {
-  display: contents;
-}
+  .app-flight-card__col-ori-desti {
+    display: contents;
+  }
 
-.row {
-  justify-content: center;
-}
+  .app-flight-card__time {
+    text-align: center;
+    font-size: 13px;
+    color: grey;
+  }
 
-.card-container {
-  margin-block: 3%;
+  .app-flight-card__icon-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    height: 50px;
+    width: 50px;
+    background: white;
+    border-radius: 50%;
+    z-index: 10;
+    border: 1px solid grey;
+    transform: translateX(-50%);
+
+    mat-icon {
+      color: colors.$black;
+    }
+  }
+
+  .destination, .origin {
+    font-size: 18px;
+    font-weight: bold;
+    color: colors.$primary;
+  }
+
+  .app-flight-card__icon-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .app-flight-card__card-container {
+    margin-block: 3%;
+  }
 }

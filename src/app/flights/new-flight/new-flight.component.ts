@@ -10,7 +10,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   styleUrls: ['./new-flight.component.scss']
 })
 export class NewFlightComponent {
-  @ViewChild('flightForm') flightForm: FlightFormComponent | undefined;
+  @ViewChild('flightForm') flightForm?: FlightFormComponent ;
 
   constructor(
     private flightsService: FlightsService,

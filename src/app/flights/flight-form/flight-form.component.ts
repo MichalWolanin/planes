@@ -49,6 +49,10 @@ export class FlightFormComponent implements OnInit {
     });
   }
 
+  errors() {
+    return this.form.get('code')?.errors;
+  }
+
   private buildForm() {
     this.form = this.formBuilder.group({
       origin: ['', {validators: [Validators.required]}],
