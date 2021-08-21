@@ -2,7 +2,7 @@
   <div class="container">
     <img src="assets/images/plane.svg" class="logo" routerLink="/dashboard">
     <div class="logout-container">
-      <span class="user-login float-right">Hello, Dżony Lipko </span>
+      <span class="user-login float-right">Hello, {{ user!.email }} </span>
       <mat-icon class="logout-icon float-right" (click)="logout()">power_settings_new</mat-icon>
     </div>
   </div>
