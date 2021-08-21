@@ -1,80 +1,86 @@
-
-<form [formGroup]="form">
-  <div class="row">
-    <div>
-      <mat-form-field>
-        <input matInput formControlName="code" placeholder="Code" #codeInput>
-        <mat-error *ngIf="form.get('code')?.errors?.required">Code is required</mat-error>
-        <mat-error *ngIf="form.get('code')?.errors?.minlength">Minimum length is 4 chars</mat-error>
-        <mat-error *ngIf="form.get('code')?.errors?.maxlength">Maximum length is 7 chars</mat-error>
-        <mat-hint align="end"> {{ codeInput.value.length }} / 7</mat-hint>
-      </mat-form-field>
-    </div>
-  </div>
-  <div class="row">
-    <div >
-      <mat-form-field>
-        <input matInput formControlName="origin" placeholder="Origin">
-      </mat-form-field>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <mat-form-field>
-        <input matInput formControlName="destination" placeholder="Destination">
-      </mat-form-field>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <mat-form-field>
-        <input matInput formControlName="departureTime" placeholder="Departure time">
-      </mat-form-field>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <mat-form-field>
-        <input matInput formControlName="returnTime" placeholder="Return time">
-      </mat-form-field>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <textarea matInput formControlName="additionalInformation" placeholder="Additional Information"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <mat-checkbox formControlName="withSKPlanesDiscount">With WP Discount</mat-checkbox>
-    </div>
-  </div>
-  <div formArrayName="crew" class="crew-container shadow" *ngFor="let crewMember of crew.controls;index as index">
-    <div class="row crew-header">
-      <div class="col">
-        <span>Crew Member - {{ index + 1}} </span>
-        <mat-icon class="float-right" (click)="removeCrewMember(index)">delete_forever</mat-icon>
-      </div>
-
-      <div class="row" [formGroupName]="index">
-        <div>
+<div class="app-flight-form">
+  <form [formGroup]="form">
+    <div class="app-flight-form__form-field">
+      <div>
           <mat-form-field>
-            <input matInput formControlName="name" placeholder="Name">
+            <input matInput formControlName="code" placeholder="Code" #codeInput>
+            <mat-error *ngIf="form.get('code')?.errors?.required">Code is required</mat-error>
+            <mat-error *ngIf="form.get('code')?.errors?.minlength">Minimum length is 4 chars</mat-error>
+            <mat-error *ngIf="form.get('code')?.errors?.maxlength">Maximum length is 7 chars</mat-error>
+            <mat-hint align="end"> {{ codeInput.value.length }} / 7</mat-hint>
           </mat-form-field>
         </div>
+      <div>
         <div>
           <mat-form-field>
-            <mat-select formControlName="job" placeholder="Job">
-              <mat-option *ngFor="let job of jobs" [value] = "job.value">{{ job.label }} </mat-option>
-            </mat-select>
+            <input matInput formControlName="origin" placeholder="Origin">
           </mat-form-field>
         </div>
       </div>
+      <div>
+        <div>
+          <mat-form-field>
+            <input matInput formControlName="destination" placeholder="Destination">
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <div>
+          <mat-form-field>
+            <input matInput formControlName="departureTime" placeholder="Departure time">
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <div>
+          <mat-form-field>
+            <input matInput formControlName="returnTime" placeholder="Return time">
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <div>
+          <textarea matInput formControlName="additionalInformation" placeholder="Additional Information"></textarea>
+        </div>
+      </div>
+      <div>
+        <div>
+          <mat-checkbox color="warn" formControlName="withSKPlanesDiscount">With WP Discount</mat-checkbox>
+        </div>
+      </div>
+    </div>
+
+  <div class="app-flight-form__crew">
+    <div formArrayName="crew" class="app-flight-form__crew-container shadow" *ngFor="let crewMember of crew.controls;index as index">
+      <div class="app-flight-form__crew-header">
+        <div>
+          <span>Crew Member - {{ index + 1}} </span>
+          <mat-icon class="app-flight-form__float-right" (click)="removeCrewMember(index)">close</mat-icon>
+        </div>
+
+        <div [formGroupName]="index">
+          <div>
+            <mat-form-field>
+              <input matInput formControlName="name" placeholder="Name">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-select formControlName="job" placeholder="Job">
+                <mat-option *ngFor="let job of jobs" [value] = "job.value">{{ job.label }} </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
+  <div class="app-flight-form__buttons-field">
     <div>
-      <button mat-raised-button color="primary" (click)="addCrewMember()">Add crew member</button>
+      <div>
+        <button mat-raised-button class="app-flight-form__button" (click)="addCrewMember()">Add crew member<mat-icon>add</mat-icon></button>
+      </div>
     </div>
   </div>
-</form>
+  </form>
+</div>

@@ -9,11 +9,12 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 @Component({
   selector: 'app-edit-flight',
   templateUrl: './edit-flight.component.html',
-  styleUrls: ['./edit-flight.component.css']
+  styleUrls: ['./edit-flight.component.scss']
 })
 export class EditFlightComponent {
-  @ViewChild('flightForm') flightForm!: FlightFormComponent;
-  flight!: Flight;
+  @ViewChild('flightForm') flightForm: FlightFormComponent | undefined;
+
+  flight: Flight | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,12 +28,12 @@ export class EditFlightComponent {
   }
 
   removeFlight() {
-    this.flightsService.removeFlight(this.flight.key)
+    this.flightsService.removeFlight(this.flight?.key)
       .then(this.onRemoveSuccess.bind(this), this.onFailure.bind(this));
   }
 
   editFlight() {
-    this.flightsService.editFlight(this.flight.key, this.flightForm.form.value)
+    this.flightsService.editFlight(this.flight?.key, this.flightForm?.form.value)
       .then(this.onEditSuccess.bind(this), this.onFailure.bind(this));
   }
 
@@ -53,9 +54,7 @@ export class EditFlightComponent {
     private loadFlight() {
       const key = this.route.snapshot.params['key'];
       this.flightsService.getFlight(key)
-        .pipe(tap(flight => this.flightForm.setFlight(flight)))
+        .pipe(tap(flight => this.flightForm?.setFlight(flight)))
           .subscribe(flight => this.flight = flight);
     }
-
-
 }

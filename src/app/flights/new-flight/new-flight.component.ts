@@ -7,10 +7,10 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 @Component({
   selector: 'app-new-flight',
   templateUrl: './new-flight.component.html',
-  styleUrls: ['./new-flight.component.css']
+  styleUrls: ['./new-flight.component.scss']
 })
 export class NewFlightComponent {
-  @ViewChild('flightForm') flightForm: FlightFormComponent | undefined;
+  @ViewChild('flightForm') flightForm?: FlightFormComponent ;
 
   constructor(
     private flightsService: FlightsService,

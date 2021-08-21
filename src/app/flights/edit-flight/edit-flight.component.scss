@@ -1,0 +1,34 @@
+@use 'src/assets/variables/colors';
+
+.app-edit-flight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .app-edit-flight__main {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-edit-flight__remove-btn {
+    color: colors.$primary;
+    cursor: pointer;
+    font-size: 42px;
+    padding-left: 4%;
+  }
+
+  .app-edit-flight__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-edit-flight__buttons {
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-edit-flight__save-btn {
+    background: colors.$primary;
+  }
+}

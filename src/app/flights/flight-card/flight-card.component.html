@@ -1,19 +1,21 @@
-<div class="card-container">
-  <div class="shadow card-content">
-    <div class="row">
-      <div class="col-ori-desti">
-        <div>
-          <p class="origin">{{ flight.origin }} - {{flight.destination}}</p>
+<div class="app-flight-card">
+  <div class="app-flight-card__card-container">
+    <div class="app-flight-card__card-content shadow">
+      <div class="row">
+        <div class="app-flight-card__col-ori-desti">
+          <div>
+            <p class="origin">{{ flight.origin }} - {{flight.destination}}</p>
+          </div>
         </div>
       </div>
-    </div>
-      <div class="row">
-        <div class="col">
-          <p class="time">{{ flight.departureTime }} - {{ flight.returnTime }}</p>
+        <div class="row">
+          <div class="col">
+            <p class="app-flight-card__time">{{ flight.departureTime }} - {{ flight.returnTime }}</p>
+          </div>
         </div>
+    </div>
+      <div class="shadow app-flight-card__icon-container">
+        <mat-icon> airplanemode_active </mat-icon>
       </div>
   </div>
-    <div class="icon-container shadow">
-      <mat-icon> airplanemode_active </mat-icon>
-    </div>
 </div>
