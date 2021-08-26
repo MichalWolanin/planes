@@ -11,7 +11,7 @@ export class FlightFormComponent implements OnInit {
   @Input() editMode = false;
   form!: FormGroup;
   jobs = [
-    { label: 'Stwardess', value: 'stwardess'},
+    { label: 'Stewardess', value: 'stewardess'},
     { label: 'Senior Cabin Crew', value: 'senior_cabin_crew'},
     { label: 'Pilot', value: 'pilot'},
     { label: 'Co-Pilot', value: 'co_pilot'},
@@ -58,7 +58,9 @@ export class FlightFormComponent implements OnInit {
       origin: ['', {validators: [Validators.required]}],
       destination: ['', {validators: [Validators.required]}],
       departureTime: ['', {validators: [Validators.required]}],
+      departureDate: ['', {validators: [Validators.required]}],
       returnTime: ['', {validators: [Validators.required]}],
+      returnDate: ['', {validators: [Validators.required]}],
       code: ['', {validators: [Validators.required, Validators.minLength(4),Validators.maxLength(7)]}],
       additionalInformation: '',
       withSKPlanesDiscount: false,

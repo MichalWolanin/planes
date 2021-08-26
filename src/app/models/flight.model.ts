@@ -3,9 +3,11 @@ export interface Flight {
   code: string;
   crew: Crew[];
   departureTime: string;
+  departureDate: string;
   destination: string;
   origin: string;
   returnTime: string;
+  returnDate: string;
   withSKPlanesDiscount: boolean;
   key: string;
 }
