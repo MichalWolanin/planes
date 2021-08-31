@@ -1,12 +1,14 @@
-<mat-toolbar color="black">
-  <div class="container">
-    <img src="assets/images/plane.svg" class="logo" routerLink="/dashboard">
-    <div class="logout-container">
-      <span class="user-login float-right">Hello, {{ user!.email }} </span>
-      <mat-icon class="logout-icon float-right" (click)="logout()">power_settings_new</mat-icon>
-    </div>
+<div class="app-dashboard">
+  <mat-toolbar class="app-dashboard__mat-toolbar" color="black">
+      <div class="app-dashboard__navbar">
+        <img src="assets/images/plane.svg" class="app-dashboard__logo" routerLink="/dashboard">
+        <div class="app-dashboard__logout-container">
+          <span class="app-dashboard__user-login float-right">Hello, {{ user?.email }} </span>
+          <mat-icon class="app-dashboard__logout-icon float-right" (click)="logout()">power_settings_new</mat-icon>
+        </div>
+      </div>
+  </mat-toolbar>
+  <div class="app-dashboard__container">
+    <router-outlet></router-outlet>
   </div>
-</mat-toolbar>
-<div class="container">
-  <router-outlet></router-outlet>
 </div>

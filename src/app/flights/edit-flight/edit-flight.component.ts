@@ -44,7 +44,7 @@ export class EditFlightComponent {
 
   private onRemoveSuccess() {
     this.router.navigate(['/dashboard']);
-    this.toast.open('Flight has been successfully removed', '', {panelClass: 'toast-success'});
+    this.toast.open('Flight has been successfully edited', '', {panelClass: 'toast-success'});
   }
 
   private onFailure(error : any) {
