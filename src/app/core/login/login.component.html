@@ -3,11 +3,11 @@
     <img src="./assets/images/plane.svg" class="logo" alt="logo">
     <h3>Login or register</h3>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Email" [(ngModel)]="credentials.email" required>
+      <input matInput placeholder="Email" [(ngModel)]="credentials.email" (keydown.enter)="login()" required>
       <mat-error>Email is required</mat-error>
     </mat-form-field>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Password" type="password" [(ngModel)]="credentials.password" required>
+      <input matInput placeholder="Password" type="password" [(ngModel)]="credentials.password" (keydown.enter)="login()" required>
       <mat-error>Password is required</mat-error>
     </mat-form-field>
      <div class="login-button">
