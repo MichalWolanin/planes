@@ -10,7 +10,15 @@
       </div>
         <div class="row">
           <div class="col">
-            <p class="app-flight-card__time">{{ flight.departureDate }}, {{ flight.departureTime }} - {{ flight.returnDate }}, {{ flight.returnTime}}</p>
+            <p class="app-flight-card__date"><mat-icon> event </mat-icon> {{ flight.departureDate }}</p>
+            <p class="app-flight-card__date"><mat-icon> schedule </mat-icon> {{ flight.departureTime }}</p>
+          </div>
+          <div>
+            <mat-icon> trending_flat </mat-icon>
+          </div>
+          <div>
+            <p class="app-flight-card__time"><mat-icon> event </mat-icon> {{ flight.returnDate }}</p>
+            <p class="app-flight-card__time"><mat-icon> schedule </mat-icon> {{ flight.returnTime }}</p>
           </div>
         </div>
     </div>
