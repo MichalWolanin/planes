@@ -59,6 +59,16 @@
   .app-flight-form__crew-member-title {
     margin-top: 5%;
   }
+
+  .app-flight-form__departure{
+    display: grid;
+    margin-top: 10px;
+  }
+
+  .app-flight-form__return {
+    display: grid;
+    margin-top: 10px;
+  }
 }
 
 .mat-form-field {
